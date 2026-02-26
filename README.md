@@ -1,4 +1,4 @@
-# Yashika Bhatia - Portfolio
+# Dev Vashist - Portfolio
 
 A modern, dark-themed portfolio website built with Next.js, featuring glassmorphism design, smooth animations, and interactive elements.
 
