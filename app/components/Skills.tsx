@@ -11,10 +11,9 @@ export default function Skills() {
       color: "from-neon-blue to-blue-600",
       skills: [
         { name: "Python", level: 95 },
-        { name: "JavaScript", level: 90 },
-        { name: "Java", level: 85 },
+        { name: "Nodejs", level: 80 },
+        { name: "Java", level: 92 },
         { name: "C++", level: 80 },
-        { name: "TypeScript", level: 88 }
       ]
     },
     {
@@ -61,7 +60,7 @@ export default function Skills() {
         { name: "Matplotlib", level: 90 },
         { name: "Seaborn", level: 88 },
         { name: "Plotly", level: 85 },
-        { name: "Streamlit", level: 82 },
+        { name: "Streamlit", level: 92 },
         { name: "FastAPI", level: 85 }
       ]
     },

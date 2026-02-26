@@ -6,7 +6,7 @@ import CursorGlow from './components/CursorGlow'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Yashika Bhatia - Software Developer & AI Engineer',
+  title: 'Dev Vashist - ML Engineer & Data Scientist',
   description: 'Software Developer & Data Science Engineer specializing in AI-driven systems, full-stack architecture, and low-latency applications.',
 }
 

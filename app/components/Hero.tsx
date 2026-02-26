@@ -47,10 +47,10 @@ export default function Hero() {
               className="text-6xl lg:text-7xl font-bold leading-tight"
             >
               <span className="bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">
-                Yashika
+                Dev
               </span>
               <br />
-              <span className="text-gradient">Bhatia</span>
+              <span className="text-gradient">Vashist</span>
             </motion.h1>
 
             {/* Value Proposition - Secondary */}
@@ -66,7 +66,7 @@ export default function Hero() {
               </h2>
               
               <p className="text-lg text-gray-400 leading-relaxed max-w-xl">
-                Software Developer & Data Science Engineer specializing in AI-driven systems, 
+                Machine Learning  & Data Science Engineer specializing in AI-driven systems, 
                 full-stack architecture, and low-latency applications.
               </p>
             </motion.div>
@@ -83,7 +83,7 @@ export default function Hero() {
                 <div className="text-gray-500">LeetCode</div>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white">8.87</div>
+                <div className="text-2xl font-bold text-white">9.3</div>
                 <div className="text-gray-500">CGPA</div>
               </div>
               <div>
@@ -100,7 +100,7 @@ export default function Hero() {
               className="flex flex-wrap gap-4 pt-4"
             >
               <a
-                href="https://github.com/yashika2211"
+                href="https://github.com/decode2211"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group bg-white text-black px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition-all duration-300 flex items-center gap-2"
@@ -110,7 +110,7 @@ export default function Hero() {
               </a>
               
               <a
-                href="https://drive.google.com/uc?export=download&id=13kmbhiv5ulLuGK_saNS__qYt6GbHazJW"
+                href="https://drive.google.com/file/d/19BinLvOqUstuQn1mSPEAzHkP5NurEu2g/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-medium hover:border-gray-400 transition-all duration-300 flex items-center gap-2"

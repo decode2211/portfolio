@@ -62,7 +62,7 @@ export default function About() {
           >
             <div className="grid md:grid-cols-3 gap-8 text-center">
               <div>
-                <div className="text-3xl font-bold text-neon-blue mb-2">8.87</div>
+                <div className="text-3xl font-bold text-neon-blue mb-2">9.3</div>
                 <div className="text-gray-400">CGPA</div>
               </div>
               <div>
@@ -71,7 +71,7 @@ export default function About() {
               </div>
               <div>
                 <div className="text-lg font-semibold text-white mb-2">SRM AP</div>
-                <div className="text-gray-400">Data Science Engineering</div>
+                <div className="text-gray-400">Electronics and ML Engineer</div>
               </div>
             </div>
           </motion.div>

@@ -32,13 +32,6 @@ export default function Contact() {
       value: "View my code",
       href: "https://github.com/decode2211",
       color: "hover:text-gray-300"
-    },
-    {
-      icon: <Instagram className="w-6 h-6" />,
-      label: "Instagram",
-      value: "@classyxshika",
-      href: "https://www.instagram.com/classyxshika/",
-      color: "hover:text-pink-400"
     }
   ]
 
@@ -187,7 +180,7 @@ export default function Contact() {
                   Let's build something incredible together. I'm always excited to work on innovative projects.
                 </p>
                 <a
-                  href="mailto:yashika.bhatia0522@gmail.com?subject=Let's%20Work%20Together"
+                  href="mailto:devvashist1117@gmail.com?subject=Let's%20Work%20Together"
                   className="inline-flex items-center gap-2 glass px-8 py-4 rounded-xl neon-glow hover:scale-105 transition-all duration-300"
                 >
                   <Mail className="w-5 h-5" />

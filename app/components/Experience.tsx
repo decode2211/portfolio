@@ -6,35 +6,29 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react'
 export default function Experience() {
   const experiences = [
     {
-      company: "Aii Develops",
-      role: "Software Development Engineer Intern",
-      period: "Jan 2025 – Present",
-      location: "Remote",
-      description: "Building scalable web applications and microservices architecture",
+      company: "Mind Mauji Pvt. Ltd.",
+      role: "Machine Learning Intern",
+      period: "Jun 2025 – Aug 2025",
+      location: "On-site / Hybrid",
+      description:
+        "Built an AI-driven Resume vs Job Description matching system using NLP and machine learning techniques to automate recruitment screening workflows.",
       technologies: [
-        "React", "Node.js", "PostgreSQL", "AWS Lambda", 
-        "S3", "DynamoDB", "Docker", "CI/CD", "REST APIs"
+        "Python",
+        "NLP",
+        "Machine Learning",
+        "Pandas",
+        "NumPy",
+        "Streamlit",
+        "MySQL",
+        "Data Preprocessing"
       ],
       highlights: [
-        "Developed microservices handling 10k+ requests/day",
-        "Implemented CI/CD pipelines reducing deployment time by 60%",
-        "Built real-time features using WebSockets and Redis"
-      ]
-    },
-    {
-      company: "Prodigy Infotech",
-      role: "Data Science Intern",
-      period: "Previous Experience",
-      location: "Remote",
-      description: "Machine learning model development and data analytics",
-      technologies: [
-        "Python", "TensorFlow", "scikit-learn", "Pandas", 
-        "NumPy", "Matplotlib", "SQL", "Docker"
-      ],
-      highlights: [
-        "Built ML models with 95%+ accuracy for classification tasks",
-        "Optimized data processing pipelines for 3x faster performance",
-        "Created interactive dashboards for business intelligence"
+        "Processed 500+ resumes across multiple job roles using NLP-based similarity scoring",
+        "Reduced manual resume screening effort by ~40% through predictive candidate–job fit models",
+        "Architected reusable data cleaning and preprocessing pipelines",
+        "Developed Streamlit web app integrated with MySQL for structured reporting",
+        "Collaborated with recruiters & engineers to translate business needs into ML solutions",
+        "Evaluated model performance and presented insights to technical & non-technical stakeholders"
       ]
     }
   ]
