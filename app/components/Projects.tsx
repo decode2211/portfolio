@@ -1,28 +1,27 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, ExternalLink, Zap, Brain, TrendingUp } from 'lucide-react'
+import { Github, ExternalLink, Zap, Brain, TrendingUp, Heart, Shield } from 'lucide-react'
 
 export default function Projects() {
 
   const projects = [
     {
-      title: "Movie Recommendation System",
-      subtitle: "Machine Learning Recommendation Engine",
+      title: "Us, Always",
+      subtitle: "Full-Stack Relationship Web App",
       description:
-        "Implemented a content-based recommendation engine using TF-IDF and cosine similarity to generate explainable personalized movie suggestions.",
-      icon: <Brain className="w-8 h-8" />,
-      image: "/api/placeholder/600/400",
-      technologies: ["Python", "Machine Learning", "TF-IDF", "Scikit-learn"],
+        "Built a full-stack backend for a private relationship web app; designed a PostgreSQL schema with Prisma ORM covering users, milestones, media, and quiz entries with relational integrity.",
+      icon: <Heart className="w-8 h-8" />,
+      technologies: ["Node.js", "Express", "PostgreSQL", "Prisma ORM", "Socket.io", "JWT", "TypeScript"],
       metrics: [
-        { label: "Model", value: "Content-Based" },
-        { label: "Technique", value: "TF-IDF" },
-        { label: "Similarity", value: "Cosine" }
+        { label: "Auth", value: "JWT" },
+        { label: "Real-time", value: "Socket.io" },
+        { label: "Storage", value: "Cloudinary" }
       ],
       highlights: [
-        "Content-based recommendation engine",
-        "Feature engineering for relevance",
-        "Explainable top-N recommendations"
+        "JWT httpOnly cookie authentication system",
+        "Real-time bidirectional events via Socket.io (shared watch queue, live sync)",
+        "RESTful APIs for all core features including photo uploads via Cloudinary"
       ],
       github: "#",
       demo: "#",
@@ -30,22 +29,21 @@ export default function Projects() {
     },
 
     {
-      title: "Potential Fishing Zone (PFZ) Prediction API",
-      subtitle: "FastAPI ML Prediction System",
+      title: "PFZ Prediction & Biodiversity Analysis",
+      subtitle: "ML Pipeline & Oceanographic Data Analysis",
       description:
-        "Constructed a FastAPI backend delivering real-time ML predictions using satellite and oceanographic datasets with scalable deployment.",
+        "Built a scalable ML pipeline to preprocess and model 8.5GB+ satellite and oceanographic data for predicting potential fishing zones; analyzed large-scale datasets to identify biodiversity patterns and mixed layer depth variations.",
       icon: <TrendingUp className="w-8 h-8" />,
-      image: "/api/placeholder/600/400",
-      technologies: ["FastAPI", "Python", "Machine Learning", "API"],
+      technologies: ["Python", "FastAPI", "Scikit-learn", "JavaScript", "HTML", "CSS"],
       metrics: [
-        { label: "Prediction", value: "Real-time" },
-        { label: "Framework", value: "FastAPI" },
-        { label: "Deployment", value: "Scalable" }
+        { label: "Dataset", value: "8.5GB+" },
+        { label: "API", value: "FastAPI" },
+        { label: "Viz", value: "Interactive" }
       ],
       highlights: [
-        "Real-time ML prediction API",
-        "Satellite & oceanographic integration",
-        "CORS-enabled frontend connectivity"
+        "Feature engineering, geospatial preprocessing & supervised model training",
+        "Predictions served via FastAPI REST APIs with HTML/CSS/JS frontend dashboard",
+        "Ocean biodiversity trend analysis with mixed layer depth evaluation"
       ],
       github: "#",
       demo: "#",
@@ -53,68 +51,65 @@ export default function Projects() {
     },
 
     {
-      title: "Biodiversity Zones & Mixed Layer Depth Analysis",
-      subtitle: "Oceanographic Data Analysis",
+      title: "Fraud Detection System (AML)",
+      subtitle: "Ensemble ML for Financial Crime Detection",
       description:
-        "Analyzed large-scale oceanographic datasets to identify biodiversity patterns and mixed layer depth variations with interactive visualizations.",
+        "Developed ensemble ML models on large-scale financial datasets to detect fraudulent transactions and money-laundering activity using XGBoost and LightGBM.",
+      icon: <Shield className="w-8 h-8" />,
+      technologies: ["Python", "XGBoost", "LightGBM", "Pandas"],
+      metrics: [
+        { label: "Models", value: "Ensemble" },
+        { label: "Metric", value: "AUC-ROC" },
+        { label: "Target", value: "AML" }
+      ],
+      highlights: [
+        "Engineered features: transaction velocity, network relationships & behavioral patterns",
+        "Evaluated using AUC-ROC, precision-recall, and F1-score",
+        "Detected fraudulent transactions across large-scale financial datasets"
+      ],
+      github: "#",
+      demo: "#",
+      featured: false
+    },
+
+    {
+      title: "Deep Reinforcement Learning Agent (DQN)",
+      subtitle: "Sequential Decision-Making with Deep Q-Networks",
+      description:
+        "Implemented a Deep Q-Network agent for sequential decision-making using Gymnasium, applying experience replay, target networks, and reward shaping for stable convergence.",
+      icon: <Brain className="w-8 h-8" />,
+      technologies: ["Python", "PyTorch", "Gymnasium", "TensorBoard"],
+      metrics: [
+        { label: "Algorithm", value: "DQN" },
+        { label: "Framework", value: "PyTorch" },
+        { label: "Tracking", value: "TensorBoard" }
+      ],
+      highlights: [
+        "Experience replay, target networks & reward shaping for stable convergence",
+        "Monitored training via TensorBoard: episode rewards, loss curves & Q-value progression",
+        "Sequential decision-making in Gymnasium environments"
+      ],
+      github: "#",
+      demo: "#",
+      featured: false
+    },
+
+    {
+      title: "Explainable AI (XAI) Reasoning System",
+      subtitle: "Human-Interpretable AI Decision Traces",
+      description:
+        "Built an XAI pipeline to generate structured, human-interpretable reasoning traces for model decisions using NLP and LLM APIs; optimized for low-latency real-time inference.",
       icon: <Zap className="w-8 h-8" />,
-      image: "/api/placeholder/600/400",
-      technologies: ["Python", "Data Analysis", "HTML", "CSS", "JavaScript"],
+      technologies: ["Python", "NLP", "LLM APIs", "Prompt Engineering"],
       metrics: [
-        { label: "Dataset", value: "Large-scale" },
-        { label: "Analysis", value: "Statistical" },
-        { label: "Visualization", value: "Interactive" }
+        { label: "Output", value: "Structured" },
+        { label: "Latency", value: "Real-time" },
+        { label: "Method", value: "XAI" }
       ],
       highlights: [
-        "Ocean biodiversity trend analysis",
-        "Mixed layer depth evaluation",
-        "Interactive visualization dashboards"
-      ],
-      github: "#",
-      demo: "#",
-      featured: false
-    },
-
-    {
-      title: "Financial Tracker for Teenagers",
-      subtitle: "Web-based Finance Management",
-      description:
-        "Developed a financial tracking web application enabling teenagers to manage income, expenses and savings through interactive dashboards.",
-      icon: <TrendingUp className="w-8 h-8" />,
-      image: "/api/placeholder/600/400",
-      technologies: ["Node.js", "JavaScript", "HTML", "CSS"],
-      metrics: [
-        { label: "Tracking", value: "Real-time" },
-        { label: "Dashboard", value: "Interactive" },
-        { label: "Insights", value: "Structured" }
-      ],
-      highlights: [
-        "Income & expense tracking",
-        "Real-time dashboards",
-        "User-friendly financial insights"
-      ],
-      github: "#",
-      demo: "#",
-      featured: false
-    },
-
-    {
-      title: "Cadence",
-      subtitle: "System Development Project",
-      description:
-        "Cadence is an ongoing project focused on building scalable intelligent systems using modern development and architectural practices.",
-      icon: <Brain className="w-8 h-8" />,
-      image: "/api/placeholder/600/400",
-      technologies: ["In Progress"],
-      metrics: [
-        { label: "Status", value: "Developing" },
-        { label: "Architecture", value: "Scalable" },
-        { label: "Phase", value: "Active" }
-      ],
-      highlights: [
-        "Currently under development",
-        "Modern scalable architecture",
-        "Future production deployment"
+        "Structured, human-interpretable reasoning traces for model decisions",
+        "NLP and LLM APIs with optimized prompt engineering",
+        "Low-latency real-time inference pipeline"
       ],
       github: "#",
       demo: "#",
