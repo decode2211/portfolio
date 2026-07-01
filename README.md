@@ -73,7 +73,7 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ## 🤝 Contact
 
-- **Email**: yashika.bhatia0522@gmail.com
-- **LeetCode**: [yashikabhatia2209](https://leetcode.com/u/yashikabhatia2209/)
-- **LinkedIn**: [Connect with me](#)
-- **GitHub**: [View my code](#)
+- **Email**: devvashist1117@gmail.com
+- **LeetCode**: [devyash1122](https://leetcode.com/u/devyash1122/)
+- **LinkedIn**: [Connect with me](https://www.linkedin.com/in/dev-vashist-063585286/)
+- **GitHub**: [View my code](https://github.com/decode2211)
