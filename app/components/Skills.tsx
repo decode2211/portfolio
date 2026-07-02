@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Code, Database, Cloud, Wrench } from 'lucide-react'
+import { BrainCircuit, Cloud, Code, Layout, Server, Wrench } from 'lucide-react'
 
 export default function Skills() {
   const skillCategories = [
@@ -9,6 +9,7 @@ export default function Skills() {
       title: "Languages",
       icon: <Code className="w-6 h-6" />,
       color: "from-neon-blue to-blue-600",
+      showProgress: true,
       skills: [
         { name: "Python", level: 95 },
         { name: "Nodejs", level: 80 },
@@ -18,8 +19,9 @@ export default function Skills() {
     },
     {
       title: "Frontend",
-      icon: <Code className="w-6 h-6" />,
+      icon: <Layout className="w-6 h-6" />,
       color: "from-neon-purple to-purple-600",
+      showProgress: true,
       skills: [
         { name: "React", level: 92 },
         { name: "Next.js", level: 88 },
@@ -30,20 +32,24 @@ export default function Skills() {
     },
     {
       title: "Backend & Database",
-      icon: <Database className="w-6 h-6" />,
-      color: "from-green-400 to-green-600",
+      icon: <Server className="w-6 h-6" />,
+      color: "from-neon-blue to-blue-600",
+      showProgress: false,
       skills: [
-        { name: "Node.js", level: 90 },
-        { name: "Express.js", level: 88 },
-        { name: "PostgreSQL", level: 85 },
-        { name: "MongoDB", level: 82 },
-        { name: "Redis", level: 80 }
+        { name: "Node.js", level: undefined },
+        { name: "Express.js", level: undefined },
+        { name: "PostgreSQL", level: undefined },
+        { name: "MongoDB", level: undefined },
+        { name: "Redis", level: undefined },
+        { name: "Streamlit", level: undefined },
+        { name: "FastAPI", level: undefined }
       ]
     },
     {
       title: "Data Science & ML",
-      icon: <Database className="w-6 h-6" />,
-      color: "from-pink-400 to-pink-600",
+      icon: <BrainCircuit className="w-6 h-6" />,
+      color: "from-neon-purple to-purple-600",
+      showProgress: true,
       skills: [
         { name: "TensorFlow", level: 90 },
         { name: "PyTorch", level: 80 },
@@ -53,39 +59,29 @@ export default function Skills() {
       ]
     },
     {
-      title: "ML Frameworks & Tools",
-      icon: <Database className="w-6 h-6" />,
-      color: "from-purple-400 to-purple-600",
-      skills: [
-        { name: "Matplotlib", level: 90 },
-        { name: "Seaborn", level: 88 },
-        { name: "Plotly", level: 85 },
-        { name: "Streamlit", level: 92 },
-        { name: "FastAPI", level: 85 }
-      ]
-    },
-    {
       title: "Cloud & DevOps",
       icon: <Cloud className="w-6 h-6" />,
-      color: "from-orange-400 to-orange-600",
+      color: "from-neon-purple to-purple-600",
+      showProgress: false,
       skills: [
-        { name: "AWS (EC2, S3, Lambda)", level: 85 },
-        { name: "Docker", level: 88 },
-        { name: "CI/CD", level: 82 },
-        { name: "REST APIs", level: 90 },
-        { name: "Model Deployment", level: 80 }
+        { name: "AWS (EC2, S3, Lambda)", level: undefined },
+        { name: "Docker", level: undefined },
+        { name: "CI/CD", level: undefined },
+        { name: "REST APIs", level: undefined },
+        { name: "Model Deployment", level: undefined }
       ]
     },
     {
       title: "Tools & Others",
       icon: <Wrench className="w-6 h-6" />,
-      color: "from-yellow-400 to-yellow-600",
+      color: "from-neon-blue to-blue-600",
+      showProgress: false,
       skills: [
-        { name: "Git", level: 95 },
-        { name: "Postman", level: 90 },
-        { name: "Figma", level: 85 },
-        { name: "VS Code", level: 95 },
-        { name: "Linux", level: 82 }
+        { name: "Git", level: undefined },
+        { name: "Postman", level: undefined },
+        { name: "Figma", level: undefined },
+        { name: "VS Code", level: undefined },
+        { name: "Linux", level: undefined }
       ]
     }
   ]
@@ -120,48 +116,61 @@ export default function Skills() {
             >
               {/* Category Header */}
               <div className="flex items-center gap-3 mb-6">
-                <div className={`p-3 rounded-xl bg-gradient-to-r ${category.color} text-white group-hover:scale-110 transition-transform`}>
+                <div className="p-3 glass rounded-xl text-neon-blue group-hover:scale-110 transition-transform">
                   {category.icon}
                 </div>
                 <h3 className="text-xl font-bold">{category.title}</h3>
               </div>
 
               {/* Skills List */}
-              <div className="space-y-4">
-                {category.skills.map((skill, skillIndex) => (
-                  <motion.div
-                    key={skillIndex}
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ 
-                      duration: 0.5, 
-                      delay: categoryIndex * 0.1 + skillIndex * 0.05 
-                    }}
-                    viewport={{ once: true }}
-                    className="space-y-2"
-                  >
-                    <div className="flex justify-between items-center">
-                      <span className="font-medium text-gray-200">{skill.name}</span>
-                      <span className="text-sm text-gray-400">{skill.level}%</span>
-                    </div>
-                    
-                    {/* Progress Bar */}
-                    <div className="w-full bg-gray-700 rounded-full h-2">
-                      <motion.div
-                        className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
-                        initial={{ width: 0 }}
-                        whileInView={{ width: `${skill.level}%` }}
-                        transition={{ 
-                          duration: 1, 
-                          delay: categoryIndex * 0.1 + skillIndex * 0.1,
-                          ease: "easeOut"
-                        }}
-                        viewport={{ once: true }}
-                      />
-                    </div>
-                  </motion.div>
-                ))}
-              </div>
+              {category.showProgress ? (
+                <div className="space-y-4">
+                  {category.skills.map((skill, skillIndex) => (
+                    <motion.div
+                      key={skillIndex}
+                      initial={{ opacity: 0, x: -20 }}
+                      whileInView={{ opacity: 1, x: 0 }}
+                      transition={{ 
+                        duration: 0.5, 
+                        delay: categoryIndex * 0.1 + skillIndex * 0.05 
+                      }}
+                      viewport={{ once: true }}
+                      className="space-y-2"
+                    >
+                      <div className="flex justify-between items-center">
+                        <span className="font-medium text-gray-200">{skill.name}</span>
+                        <span className="text-sm text-gray-400">{skill.level}%</span>
+                      </div>
+                      
+                      {/* Progress Bar */}
+                      <div className="w-full bg-gray-700 rounded-full h-2">
+                        <motion.div
+                          className={`h-2 rounded-full bg-gradient-to-r ${category.color}`}
+                          initial={{ width: 0 }}
+                          whileInView={{ width: `${skill.level}%` }}
+                          transition={{ 
+                            duration: 1, 
+                            delay: categoryIndex * 0.1 + skillIndex * 0.1,
+                            ease: "easeOut"
+                          }}
+                          viewport={{ once: true }}
+                        />
+                      </div>
+                    </motion.div>
+                  ))}
+                </div>
+              ) : (
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill, skillIndex) => (
+                    <span
+                      key={skillIndex}
+                      className="px-3 py-1 glass rounded-full text-sm border border-glass-border"
+                    >
+                      {skill.name}
+                    </span>
+                  ))}
+                </div>
+              )}
             </motion.div>
           ))}
         </div>
@@ -178,7 +187,7 @@ export default function Skills() {
             <h3 className="text-2xl font-bold mb-8">Data Science & Machine Learning Expertise</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
               {/* Core Data Science */}
-              <div className="glass-card p-6 rounded-xl">
+              <div className="glass-card p-6 rounded-2xl">
                 <h4 className="font-bold text-neon-blue mb-4">Core Data Science</h4>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -193,7 +202,7 @@ export default function Skills() {
               </div>
 
               {/* Machine Learning */}
-              <div className="glass-card p-6 rounded-xl">
+              <div className="glass-card p-6 rounded-2xl">
                 <h4 className="font-bold text-neon-purple mb-4">Machine Learning</h4>
                 <div className="flex flex-wrap gap-2">
                   {[
@@ -208,7 +217,7 @@ export default function Skills() {
               </div>
 
               {/* Deep Learning & MLOps */}
-              <div className="glass-card p-6 rounded-xl">
+              <div className="glass-card p-6 rounded-2xl">
                 <h4 className="font-bold text-green-400 mb-4">Deep Learning & MLOps</h4>
                 <div className="flex flex-wrap gap-2">
                   {[

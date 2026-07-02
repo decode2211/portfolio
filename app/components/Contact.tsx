@@ -36,7 +36,7 @@ export default function Contact() {
   ]
 
   const achievements = [
-    "200+ LeetCode problems solved",
+    "143+ LeetCode problems solved",
     "3 Hackathon wins",
     "Open source contributor",
     "SIH 2025 internal round qualified"
@@ -129,7 +129,7 @@ export default function Contact() {
                 <h3 className="text-2xl font-bold mb-6">Quick Stats</h3>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-neon-blue mb-2">200+</div>
+                    <div className="text-3xl font-bold text-neon-blue mb-2">143+</div>
                     <div className="text-sm text-gray-400">Problems Solved</div>
                   </div>
                   <div className="text-center">

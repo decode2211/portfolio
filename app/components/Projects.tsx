@@ -23,7 +23,7 @@ export default function Projects() {
         "Real-time bidirectional events via Socket.io (shared watch queue, live sync)",
         "RESTful APIs for all core features including photo uploads via Cloudinary"
       ],
-      github: "#",
+      github: "https://github.com/decode2211/loveaajkal",
       demo: "#",
       featured: true
     },
@@ -45,8 +45,8 @@ export default function Projects() {
         "Predictions served via FastAPI REST APIs with HTML/CSS/JS frontend dashboard",
         "Ocean biodiversity trend analysis with mixed layer depth evaluation"
       ],
-      github: "#",
-      demo: "#",
+      github: "https://github.com/decode2211/PFZ_mapping",
+      demo: "https://www.youtube.com/watch?v=ITZa-UxaPpw",
       featured: true
     },
 
@@ -67,7 +67,7 @@ export default function Projects() {
         "Evaluated using AUC-ROC, precision-recall, and F1-score",
         "Detected fraudulent transactions across large-scale financial datasets"
       ],
-      github: "#",
+      github: "https://github.com/decode2211/RBI-Mule-Account-Detection",
       demo: "#",
       featured: false
     },
@@ -89,7 +89,7 @@ export default function Projects() {
         "Monitored training via TensorBoard: episode rewards, loss curves & Q-value progression",
         "Sequential decision-making in Gymnasium environments"
       ],
-      github: "#",
+      github: "https://github.com/decode2211/tracegod",
       demo: "#",
       featured: false
     },
@@ -111,7 +111,7 @@ export default function Projects() {
         "NLP and LLM APIs with optimized prompt engineering",
         "Low-latency real-time inference pipeline"
       ],
-      github: "#",
+      github: "https://github.com/decode2211/trial",
       demo: "#",
       featured: false
     }
@@ -219,13 +219,13 @@ export default function Projects() {
 
                 {/* Links */}
                 <div className="flex gap-4">
-                  <a href={project.github} target="_blank"
+                  <a href={project.github} target="_blank" rel="noopener noreferrer"
                      className="flex items-center gap-2 glass-card px-6 py-3 rounded-xl">
                     <Github className="w-4 h-4"/>
                     Code
                   </a>
 
-                  <a href={project.demo} target="_blank"
+                  <a href={project.demo} target="_blank" rel="noopener noreferrer"
                      className="flex items-center gap-2 glass px-6 py-3 rounded-xl">
                     <ExternalLink className="w-4 h-4"/>
                     Live Demo

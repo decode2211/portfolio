@@ -14,9 +14,9 @@ export default function LeetCode() {
   })
 
   const finalStats = {
-    total: 200,
-    easy: 80,
-    medium: 100,
+    total: 143,
+    easy: 78,
+    medium: 54,
     hard: 20,
     streak: 15
   }
@@ -76,7 +76,7 @@ export default function LeetCode() {
     {
       icon: <Trophy className="w-6 h-6" />,
       title: "Problem Solver",
-      description: "200+ problems solved",
+      description: "143+ problems solved",
       color: "text-yellow-400"
     },
     {
@@ -117,7 +117,7 @@ export default function LeetCode() {
               Consistent problem-solving and algorithmic thinking
             </p>
             <a
-              href="https://leetcode.com/u/yashikabhatia2209/"
+              href="https://leetcode.com/u/devyash1122/"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 glass-card px-8 py-4 rounded-xl neon-glow hover:scale-105 transition-all duration-300"
@@ -149,30 +149,28 @@ export default function LeetCode() {
               </div>
 
               {/* Difficulty Breakdown */}
-              <div className="glass-card p-8 rounded-2xl">
-                <h3 className="text-xl font-bold mb-6 text-center">Difficulty Breakdown</h3>
-                <div className="space-y-6">
-                  {difficultyData.map((item, index) => (
-                    <div key={index} className="space-y-2">
-                      <div className="flex justify-between items-center">
-                        <span className="font-semibold">{item.label}</span>
-                        <span className="text-sm text-gray-400">
-                          {item.count}/{item.total}
-                        </span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-3">
-                        <motion.div
-                          className={`h-3 rounded-full ${item.color}`}
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${item.percentage}%` }}
-                          transition={{ duration: 1, delay: index * 0.2 }}
-                          viewport={{ once: true }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
+<div className="glass-card p-8 rounded-2xl">
+  <h3 className="text-xl font-bold mb-6 text-center">Difficulty Breakdown</h3>
+  <div className="space-y-6">
+    {difficultyData.map((item, index) => (
+      <div key={index} className="space-y-2">
+        <div className="flex justify-between items-center">
+          <span className="font-semibold">{item.label}</span>
+          {/* THE CHANGE: Completely removed the span that had {item.count}/{item.total} */}
+        </div>
+        <div className="w-full bg-gray-700 rounded-full h-3">
+          <motion.div
+            className={`h-3 rounded-full ${item.color}`}
+            initial={{ width: 0 }}
+            whileInView={{ width: `${item.percentage}%` }}
+            transition={{ duration: 1, delay: index * 0.2 }}
+            viewport={{ once: true }}
+          />
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
             </motion.div>
 
             {/* Achievements & Progress */}
