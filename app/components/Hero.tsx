@@ -131,7 +131,7 @@ export default function Hero() {
               </a>
 
               <a
-                href="https://www.overleaf.com/read/zkmpyqmqnhfc#f0e38b"
+                href="https://www.overleaf.com/project/6a46470ca7e337a78be62919"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-gray-600 text-white px-8 py-4 rounded-lg font-medium hover:border-gray-400 transition-all duration-300 flex items-center gap-2"
